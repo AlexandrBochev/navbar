@@ -1,7 +1,7 @@
 import { useState, type HTMLAttributes } from "react";
-import { Navbar } from "./navbar";
-import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
+import { Navbar } from "./navbar";
 type HeaderProps = HTMLAttributes<HTMLHeadElement>;
 
 export const Header = ({ ...props }: HeaderProps) => {
@@ -13,7 +13,7 @@ export const Header = ({ ...props }: HeaderProps) => {
       className={`
         w-full h-13 relative bg-white shadow-md text-gray-600
         flex items-center justify-between
-        ${isOpen && 'h-svh'}
+        ${isOpen && "h-svh"}
         transition-all duration-300
       `}
     >
@@ -27,7 +27,8 @@ export const Header = ({ ...props }: HeaderProps) => {
       />
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-4 sm:hidden absolute right-0 top-0">
+        className="p-4 sm:hidden absolute right-0 top-0"
+      >
         {isOpen ? <IoCloseSharp size={24} /> : <GiHamburgerMenu size={20} />}
       </button>
     </header>

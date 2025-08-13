@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header } from "./components/header";
 import { pages } from "./data";
 
-
 export const App = () => {
   return (
     <BrowserRouter>
@@ -14,7 +13,10 @@ export const App = () => {
             path={path}
             element={
               <Component
-                className="container mx-auto px-4 py-10 text-gray-600 capitalize"
+                className="
+                  container mx-auto px-4 py-10
+                  text-gray-600 capitalize
+                "
                 {...rest}
               />
             }
@@ -22,5 +24,5 @@ export const App = () => {
         ))}
       </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};

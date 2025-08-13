@@ -30,7 +30,9 @@ export const Navbar = ({ isOpen, setIsOpen, ...props }: NavbarProps) => {
               to={path}
               onClick={() => setIsOpen(false)}
               end
-              className={({ isActive }) => isActive ? "text-gray-900 font-semibold" : ""}
+              className={({ isActive }) =>
+                isActive ? "text-gray-900 font-semibold" : ""
+              }
             >
               {title}
             </NavLink>
