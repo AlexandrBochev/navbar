@@ -1,7 +1,8 @@
 import type { Dispatch, HTMLAttributes, SetStateAction } from "react";
 import { IoLogoApple } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
-import { pages, social } from "../data";
+import { pages } from "../../data";
+import { Social } from "../Social";
 
 type NavbarProps = HTMLAttributes<HTMLDivElement> & {
   isOpen: boolean;
@@ -39,21 +40,7 @@ export const Navbar = ({ isOpen, setIsOpen, ...props }: NavbarProps) => {
           </li>
         ))}
       </ul>
-      <ul className="flex space-x-2">
-        {social.map(({ id, url, icon }) => (
-          <li key={id}>
-            <Link
-              to={url}
-              // onClick={() => setIsOpen(false)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-900"
-            >
-              {icon}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <Social />
     </nav>
   );
 };
